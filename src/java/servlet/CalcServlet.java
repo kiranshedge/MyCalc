@@ -31,7 +31,7 @@ public class CalcServlet extends HttpServlet {
             String c;
             a=Integer.parseInt(request.getParameter("a"));
             b=Integer.parseInt(request.getParameter("b"));
-            c=request.getParameter("b");
+            c=request.getParameter("c");
             op.setV1(a);
             op.setV2(b);
             op.setChoice(c);

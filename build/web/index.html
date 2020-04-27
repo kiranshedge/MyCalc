@@ -16,26 +16,39 @@ and open the template in the editor.
 <nav class="navbar navbar-light bg-light">
   <span class="navbar-brand mb-0 h1">My Calculator</span>
 </nav>
-        <div class="container" style="margin-top: 5%">
+        <div class="container" style="margin-top: 5%" >
             <form method="GET" action="CalcServlet">
-                <div class="input-group mb-3">
+                <div class="input-group mb-3" style="width:50%">
                   <div class="input-group-prepend">
                     <span class="input-group-text">Eneter first value </span>
                   </div>
                   <input type="text" name="a" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" >
                 </div>
-                <div class="input-group mb-3">
+                <div class="input-group mb-3" style="width:50%">
                   <div class="input-group-prepend">
                     <span class="input-group-text">Eneter second value </span>
                   </div>
                   <input type="text" name="b" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
                 </div>
-                <div class="input-group mb-3">
+                
+                
+<!--                <div class="input-group mb-3">
                   <div class="input-group-prepend">
                     <span class="input-group-text">Eneter your choice as + , - , * , / </span>
                   </div>
                   <input type="text" name="c" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
-                </div>
+                </div>-->
+                
+                <div class="form-group" style="width:20%">
+                    <label for="exampleFormControlSelect1">Choose operation</label>
+                    <select class="form-control" name="c">
+                      <option>+</option>
+                      <option>-</option>
+                      <option>*</option>
+                      <option>/</option>
+                    </select>
+                  </div>
+                
                 <center><button type="submit" class="btn btn-success">Submit</button></center>
             </form>
         </div>
