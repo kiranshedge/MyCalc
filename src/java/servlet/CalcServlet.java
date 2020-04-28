@@ -8,6 +8,7 @@ package servlet;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -18,6 +19,7 @@ import service.CalcService;
  *
  * @author pcc
  */
+@WebServlet(name = "CalcServlet", urlPatterns = {"/CalcServlet"})
 public class CalcServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
@@ -36,7 +38,7 @@ public class CalcServlet extends HttpServlet {
             op.setV2(b);
             op.setChoice(c);
             
-            out.println(cal.calculate(op.getV1(),op.getV2(),op.getChoice()));
+            out.println("Result is : "+cal.calculate(op.getV1(),op.getV2(),op.getChoice()));
         }
         catch(Exception e)
                 {
